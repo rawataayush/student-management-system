@@ -1,9 +1,8 @@
 import React from 'react'
 
-const StudentCard = () => {
+const StudentCard = ({student}) => {
     return (
-        <div>
-            
+        <div className="flex flex-wrap bg-gray-300">
         </div>
     )
 }

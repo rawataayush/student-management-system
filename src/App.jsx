@@ -3,10 +3,17 @@ import StudentForm from './components/StudentForm';
 import StudentList from './components/StudentList';
 
 function App() {
+  const [students, setStudents] = useState([]);
+
+  const receiveStudent = (student) => {
+    const newStudent = [...students, student];
+    setStudents(newStudent);
+  }
+
   return (
     <div>
-      <StudentForm />
-      <StudentList />
+      <StudentForm receiveStudent={receiveStudent}/>
+      <StudentList students={students} />
     </div>
   )
 }

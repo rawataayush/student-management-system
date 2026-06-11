@@ -1,11 +1,17 @@
 import React from 'react'
+import StudentCard from './StudentCard'
 
-const StudentList = () => {
+const StudentList = (students) => {
+
     return (
-        <section className="text-center">
-            <h2 className="text-2xl">Students</h2>
-            <p className="text-gray-400">No students added yet.</p>
-        </section>
+        <>
+            <h2 className="text-2xl text-center">Students</h2>
+            {students.students.length > 0 ? students.students.map((student, index)=> (
+                <StudentCard key={index} student={student} />
+            )) : (
+                <p className="text-gray-400 text-center">No students added yet.</p>
+            )}
+        </>
     )
 }
 
