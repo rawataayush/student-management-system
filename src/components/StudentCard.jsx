@@ -16,7 +16,7 @@ const StudentCard = ({student, index, handleDelete}) => {
                     <span className="font-normal text-gray-700">{student.course}</span>
                 </div>
 
-                <button 
+                <button
                     type="button"
                     onClick={()=>handleDelete(index)}
                     className="w-full bg-red-500 p-1.5 mt-4 rounded text-white hover:bg-red-600 transition">Delete</button>
