@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const StudentForm = ({receiveStudent}) => {
 
@@ -20,15 +20,14 @@ const StudentForm = ({receiveStudent}) => {
         setName('');
         setAge('');
         setCourse('');
-
     }
 
     return (
         <div>
-            <h1 className="text-2xl pt-5 text-center mb-10 mt-7">Student Manager</h1>
+            <h1 className="text-2xl pt-5 text-center mb-10 mt-7 md:text-3xl">Student Manager</h1>
 
             <form 
-                className="rounded border-gray-300 p-2 m-2"
+                    className="w-full md:w-sm mx-auto rounded border-gray-300 p-2 m-2"
                 onSubmit={handleSubmit}>
 
                 <div className="flex flex-col pb-1.5">
